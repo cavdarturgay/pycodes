@@ -19,11 +19,12 @@ while user_want:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
-    if shift > 25:
-        shift = shift % 26
+    if shift > 36:
+        shift = shift % 37
     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
     run_again = input("Do you want to restart the cipher program? Type: yes/no\n").lower()
     if run_again == "no":
+        print("")
         print("Bye bye !!!")
         user_want = False
 
